@@ -17,7 +17,8 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-    let humanChoice = prompt("Pick between rock paper or scissors");
+    let initialhumanChoice = prompt("Pick between rock paper or scissors");
+    humanChoice = initialhumanChoice.toLowerCase();
     return humanChoice;
 };
 
@@ -34,36 +35,36 @@ function playGame() {
     
     function playRound(humanChoice, computerChoice){
         switch(humanChoice) {
-            case "Rock":
-                    if(computerChoice="paper"){
+            case "rock":
+                    if(computerChoice==="paper"){
                         console.log("You lose! Paper beats Rock");
                         computerScore++;
-                    } else if(computerChoice="scissors"){
+                    } else if(computerChoice==="scissors"){
                         console.log("You win! Rock beats Scissors");
                         humanScore++;
-                    } else if(computerChoice="rock"){
+                    } else if(computerChoice==="rock"){
                         console.log("You tied!")
                     }
                     break;
-            case "Scissors":
-                if(computerChoice="paper"){
+            case "scissors":
+                if(computerChoice==="paper"){
                         console.log("You win! Scissors beats Paper");
                         humanScore++;
-                    } else if(computerChoice="rock"){
+                    } else if(computerChoice==="rock"){
                         console.log("You lose! Rock beats Scissors");
                         computerScore++;
-                    } else if(computerChoice="scissors"){
+                    } else if(computerChoice==="scissors"){
                         console.log("You tied!")
                     }
                     break;
-            case "Paper":
-                    if(computerChoice="rock"){
+            case "paper":
+                    if(computerChoice==="rock"){
                         console.log("You win! Paper beats Rock");
                         humanScore++;
-                    } else if(computerChoice="scissors"){
+                    } else if(computerChoice==="scissors"){
                         console.log("You lose! Rock beats Paper");
                         computerScore++;
-                    } else if (computerChoice="paper"){
+                    } else if (computerChoice==="paper"){
                         console.log("You tied!")
                     }
                     break;
@@ -83,8 +84,8 @@ function playGame() {
         roundCount++
     }
 
-    if(roundCount=5){
-        console.log(`Number of Rounds:${roundCount}, Human Score: ${humanScore}, Computer Score: ${computerScore}`)
+    if(roundCount===5){
+        console.log(`Number of Rounds: ${roundCount}, Human Score: ${humanScore}, Computer Score: ${computerScore}`)
     }
 };
 

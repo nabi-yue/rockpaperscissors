@@ -31,7 +31,7 @@ let computerSelection = getComputerChoice();
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    let roundCount = 0;
+    let roundCount = 1;
     
     function playRound(humanChoice, computerChoice){
         switch(humanChoice) {
